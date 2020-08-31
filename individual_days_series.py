@@ -1,4 +1,4 @@
-from datetime import date, timedelta
+from datetime import date, timedelta, datetime
 
 ''' 
     date() format: date(Year, Month, Date)
@@ -17,3 +17,8 @@ series_friday = [(date(2020, 7, 31) - timedelta(days=days_before)).isoformat() f
 # print(f"Thursday's for 3 Months: {series_thursday} \n")
 # print(f"Friday's for 3 Months: {series_friday} \n")
 
+for day_before in range(7):
+    now = datetime.now()-timedelta(days=day_before)
+    print(now)
+    print(now.strftime("%A"))
+    print("\n")

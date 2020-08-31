@@ -17,8 +17,31 @@ df --> hc
 
 @startuml
 ' Component model for internal system view
+
 [trading_suggestor] as ts
 [date_specifier] as ds
 
 ts ..> ds
+@enduml
+
+@startuml
+' class diagram
+
+skinparam classAttributeIconSize 0
+class trading_suggestor{
+  + symbol: string
+  + data: pandas.DataFrame.from_dict(response)
+  + specific_day[]: individual_days_series.series_specificday
+
+  void fetch_specific_day_data(specific_day)
+  void show_results()
+}
+
+class individual_days_series{
+  + series_specific_day[]
+    
+  void fetch_todays_day()
+}
+
+individual_days_series <|-- trading_suggestor
 @enduml

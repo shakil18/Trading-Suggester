@@ -1,7 +1,7 @@
 import pandas as pd
 import requests
 
-import specific_date_months as spd
+import individual_days_series as spd
 
 API_URL = "https://alpha-vantage.p.rapidapi.com/query"
 

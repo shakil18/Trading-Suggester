@@ -2,7 +2,7 @@ import pandas as pd
 import yfinance as yf
 from pandas_datareader import data as pdr
 
-import specific_date_months as spd
+import individual_days_series as spd
 
 yf.pdr_override()  # <== that's all it takes :-)
 
