@@ -7,13 +7,15 @@ API_URL = "https://alpha-vantage.p.rapidapi.com/query"
 
 # DBK.DE = Deutsche Bank
 
-SYMBOL = "DBK.DE"
+SYMBOL = "AAPL"
 headers = {
     'x-rapidapi-host': "alpha-vantage.p.rapidapi.com",
     'x-rapidapi-key': "a2eabd926cmshe4c70252db43f65p12240cjsn61e424f14829"
 }
 
-''' Initializing Operations'''
+'''
+    Initializing Operations 
+'''
 data = {"function": "TIME_SERIES_DAILY",
         "symbol": SYMBOL,
         "outputsize": "full",

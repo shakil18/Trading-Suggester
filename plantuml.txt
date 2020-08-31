@@ -1,0 +1,24 @@
+@startuml
+' Usecase model for requirements analysis and system functionality
+
+left to right direction
+actor "User" as usr
+rectangle trading_suggestor {
+  usecase "give ticker and date" as td
+  usecase "fetch dataframe" as df
+  usecase "show last 3 months result" as result
+  usecase "show total no. high closed" as hc
+}
+usr --> td
+td --> df
+df --> result 
+df --> hc
+@enduml
+
+@startuml
+' Component model for internal system view
+[trading_suggestor] as ts
+[date_specifier] as ds
+
+ts ..> ds
+@enduml
