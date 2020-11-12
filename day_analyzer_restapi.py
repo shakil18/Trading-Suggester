@@ -14,7 +14,7 @@ headers = {
 }
 
 '''
-    Initializing Operations 
+    Initializing Operations for API communication 
 '''
 data = {"function": "TIME_SERIES_DAILY",
         "symbol": SYMBOL,
@@ -31,116 +31,37 @@ data = data.rename(columns={'': 'Date',
                             '3. low': 'Low',
                             '4. close': 'Close',
                             '5. volume': 'Volume'})
+
 '''
     specific_day: specify the series of day
 '''
 
-'''
-    FOR MONDAY
-'''
-specific_day = spd.series_monday
-dfs = []
-for index, value in enumerate(specific_day):
-    dfs.append(data.loc[data.axes[0].values == value])
 
-results = pd.concat(dfs, ignore_index=False)
-print(f'************************** MONDAY **************************\n'
-      f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
-      f'\n')
+def show_results(specific_day, day):
+    dfs = []
+    for index, value in enumerate(specific_day):
+        dfs.append(data.loc[data.axes[0].values == value])
 
-# Total High/Low Counting
-total_values = len(results['Open'])
-count = 0
-for i in range(total_values):
-    if float(results['Open'][i]) - float(results['Close'][i]) < 0:
-        count = count + 1
+    results = pd.concat(dfs, ignore_index=False)
+    print(f'************************** {day} **************************\n'
+          f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
+          f'\n')
 
-print(f'=====> Total Number of High Closed: {count}/{total_values} <=====\n')
-print('======================================================================')
+    # Total High/Low Counting
+    total_values = len(results['Open'])
+    count = 0
+    for i in range(total_values):
+        if float(results['Open'][i]) - float(results['Close'][i]) < 0:
+            count = count + 1
 
-
-''' FOR TUESDAY'''
-specific_day = spd.series_tuesday
-dfs = []
-for index, value in enumerate(specific_day):
-    dfs.append(data.loc[data.axes[0].values == value])
-
-results = pd.concat(dfs, ignore_index=False)
-print(f'************************** TUESDAY **************************\n'
-      f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
-      f'\n')
-
-# Total High/Low Counting
-total_values = len(results['Open'])
-count = 0
-for i in range(total_values):
-    if float(results['Open'][i]) - float(results['Close'][i]) < 0:
-        count = count + 1
-
-print(f'=====> Total Number of High Closed: {count}/{total_values} <=====\n')
-print('======================================================================')
+    print(
+        f'=====> Total Number of High Closed: {count}/{total_values}, % of High Rate = {count / total_values * 100:.2f}% <=====\n')
+    print('======================================================================')
 
 
-''' FOR WEDNESDAY'''
-specific_day = spd.series_wednesday
-dfs = []
-for index, value in enumerate(specific_day):
-    dfs.append(data.loc[data.axes[0].values == value])
-
-results = pd.concat(dfs, ignore_index=False)
-print(f'************************* WEDNESDAY *************************\n'
-      f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
-      f'\n')
-
-# Total High/Low Counting
-total_values = len(results['Open'])
-count = 0
-for i in range(total_values):
-    if float(results['Open'][i]) - float(results['Close'][i]) < 0:
-        count = count + 1
-
-print(f'=====> Total Number of High Closed: {count}/{total_values} <=====\n')
-print('======================================================================')
-
-
-''' FOR THURSDAY'''
-specific_day = spd.series_thursday
-dfs = []
-for index, value in enumerate(specific_day):
-    dfs.append(data.loc[data.axes[0].values == value])
-
-results = pd.concat(dfs, ignore_index=False)
-print(f'***************************** THURSDAY *****************************\n'
-      f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
-      f'\n')
-
-# Total High/Low Counting
-total_values = len(results['Open'])
-count = 0
-for i in range(total_values):
-    if float(results['Open'][i]) - float(results['Close'][i]) < 0:
-        count = count + 1
-
-print(f'=====> Total Number of High Closed: {count}/{total_values} <=====\n')
-print('======================================================================')
-
-''' FOR FRIDAY'''
-specific_day = spd.series_friday
-dfs = []
-for index, value in enumerate(specific_day):
-    dfs.append(data.loc[data.axes[0].values == value])
-
-results = pd.concat(dfs, ignore_index=False)
-print(f'************************* FRIDAY ************************* \n'
-      f'{results[["Open", "Close", "Volume", "High", "Low"]]}'
-      f'\n')
-
-# Total High/Low Counting
-total_values = len(results['Open'])
-count = 0
-for i in range(total_values):
-    if float(results['Open'][i]) - float(results['Close'][i]) < 0:
-        count = count + 1
-
-print(f'=====> Total Number of High Closed: {count}/{total_values} <=====\n')
-print('======================================================================')
+# Show result on a specific day
+show_results(spd.series_monday, "MONDAY")
+show_results(spd.series_tuesday, "TUESDAY")
+show_results(spd.series_wednesday, "WEDNESDAY")
+show_results(spd.series_thursday, "THURSDAY")
+show_results(spd.series_friday, "FRIDAY")

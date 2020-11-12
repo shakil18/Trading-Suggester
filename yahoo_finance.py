@@ -7,7 +7,7 @@ import individual_days_series as spd
 yf.pdr_override()  # <== that's all it takes :-)
 
 # download dataframe
-data = pdr.get_data_yahoo("ES=F", start="2020-06-01", end="2020-08-05")
+data = pdr.get_data_yahoo("AAPL", start="2020-06-01", end="2020-08-05")
 
 specific_day = spd.series_monday
 dfs = []
