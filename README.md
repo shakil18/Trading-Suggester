@@ -35,7 +35,7 @@ trading-suggestor
 <!-- REQUIREMENTS -->
 ## Requirements <a  name = "requirements"></a>
 
--  [Python >= 3.7 <a href="https://docs.docker.com/get-docker/"> </a>](python_download)
+-  [Python >= 3.7 <a href="https://www.python.org/downloads/"> </a>](python_download)
 
  
 <!-- DEPLOYMENT -->
