@@ -1,174 +1,55 @@
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">
-  <a href="https://github.com/shakil18/trading_suggestor">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Yahoo Finance</h3>
-
-  <p align="center">
-    Analysis the trading on the basis of the time pattern.
-    <br />
-    <a href="https://github.com/shakil18/trading_suggestor"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/shakil18/trading_suggestor">View Demo</a>
-    ·
-    <a href="https://github.com/shakil18/trading_suggestor/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/shakil18/trading_suggestor/issues">Request Feature</a>
-  </p>
-</p>
-
-
-
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [About The Project](#about-the-project)
-  - [Built With](#built-with)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
-- [Acknowledgements](#acknowledgements)
-
+- [Trading Suggestor <a  name = "about_the_project"></a>](#trading-suggestor-)
+  - [Directory Structure <a  name = "directory_structure"></a>](#directory-structure-)
+  - [Requirements <a  name = "requirements"></a>](#requirements-)
+  - [Deployment <a  name = "deployment"></a>](#deployment-)
+  - [Contact <a  name = "contact"></a>](#contact-)
+---
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+# Trading Suggestor <a  name = "about_the_project"></a>
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`shakil18`, `trading_suggestor`, `twitter_handle`, `email`
+This Trading Suggestor repository analyses any specific trading market based on the particular days, such as what happened every Monday for the last 12 weeks. The application uses data from [yahoo finance](https://finance.yahoo.com/). 
 
 
-### Built With
+<!-- DIRECTORY STRUCTURE -->
+## Directory Structure <a  name = "directory_structure"></a>
 
-* []()
-* []()
-* []()
+Here's a project's directory structure:
 
-
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
-
-### Installation
-
-1. Clone the repo
-```sh
-git clone https://github.com/shakil18/trading_suggestor.git
-```
-2. Install NPM packages
-```sh
-npm install
+```text
+trading-suggestor
+├── diagram						# System architecture
+│   ├── class_diagram.svg
+│   ├── plantuml.txt
+│   └── usecase.svg
+├── individual_days_series.py	# Creates a set of days
+├── README.md
+└── yahoo_finance.py			# Main program
 ```
 
 
+<!-- REQUIREMENTS -->
+## Requirements <a  name = "requirements"></a>
 
-<!-- USAGE EXAMPLES -->
-## Usage
+-  [Python >= 3.7 <a href="https://docs.docker.com/get-docker/"> </a>](python_download)
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+ 
+<!-- DEPLOYMENT -->
+## Deployment <a  name = "deployment"></a>
 
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/shakil18/trading_suggestor/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
+- Activate python virtual environment **or** install packages on local system:
+	- `source venv/bin/activate` **or**,
+	- `pip3 install –r requirements.txt`
+-   `python3 yahoo_finance.py`
 
 
 <!-- CONTACT -->
-## Contact
+## Contact <a  name = "contact"></a>
 
-Your Name - [@twitter_handle](https://twitter.com/twitter_handle) - email
+**Azizul Hakim Shakil** - [@ShakilAzizul](https://twitter.com/ShakilAzizul) - azizulhakim.shakil18@gmail.com
 
-Project Link: [https://github.com/shakil18/trading_suggestor](https://github.com/shakil18/trading_suggestor)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-
-* []()
-* []()
-* []()
-
-
-
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/shakil18/repo.svg?style=flat-square
-[contributors-url]: https://github.com/shakil18/repo/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/shakil18/repo.svg?style=flat-square
-[forks-url]: https://github.com/shakil18/repo/network/members
-[stars-shield]: https://img.shields.io/github/stars/shakil18/repo.svg?style=flat-square
-[stars-url]: https://github.com/shakil18/repo/stargazers
-[issues-shield]: https://img.shields.io/github/issues/shakil18/repo.svg?style=flat-square
-[issues-url]: https://github.com/shakil18/repo/issues
-[license-shield]: https://img.shields.io/github/license/shakil18/repo.svg?style=flat-square
-[license-url]: https://github.com/shakil18/repo/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/shakil18
-[product-screenshot]: images/screenshot.png
+Project Link: [https://github.com/shakil18/Memcached-server](https://github.com/shakil18/trading-suggestor)
