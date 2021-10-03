@@ -52,4 +52,4 @@ trading-suggestor
 
 **Azizul Hakim Shakil** - [@ShakilAzizul](https://twitter.com/ShakilAzizul) - azizulhakim.shakil18@gmail.com
 
-Project Link: [https://github.com/shakil18/Memcached-server](https://github.com/shakil18/trading-suggestor)
+Project Link: [https://github.com/shakil18/Trading-Suggestor](https://github.com/shakil18/Trading-Suggestor)
