@@ -1,7 +1,7 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-- [Trading Suggestor <a  name = "about_the_project"></a>](#trading-suggestor-)
+- [Trading Suggester <a  name = "about_the_project"></a>](#trading-suggester-)
   - [Directory Structure <a  name = "directory_structure"></a>](#directory-structure-)
   - [Requirements <a  name = "requirements"></a>](#requirements-)
   - [Deployment <a  name = "deployment"></a>](#deployment-)
@@ -10,9 +10,9 @@
 
 
 <!-- ABOUT THE PROJECT -->
-# Trading Suggestor <a  name = "about_the_project"></a>
+# Trading Suggester <a  name = "about_the_project"></a>
 
-This Trading Suggestor repository analyses any specific trading market based on the particular days, such as what happened every Monday for the last 12 weeks. The application uses data from [yahoo finance](https://finance.yahoo.com/). 
+This Trading Suggester repository analyses any specific trading market based on the particular days, such as what happened every Monday for the last 12 weeks. The application uses data from [yahoo finance](https://finance.yahoo.com/). 
 
 
 <!-- DIRECTORY STRUCTURE -->
@@ -21,7 +21,7 @@ This Trading Suggestor repository analyses any specific trading market based on 
 Here's a project's directory structure:
 
 ```text
-trading-suggestor
+trading-suggester
 ├── diagram						# System architecture
 │   ├── class_diagram.svg
 │   ├── plantuml.txt
@@ -52,4 +52,4 @@ trading-suggestor
 
 **Azizul Hakim Shakil** - [@ShakilAzizul](https://twitter.com/ShakilAzizul) - azizulhakim.shakil18@gmail.com
 
-Project Link: [https://github.com/shakil18/Trading-Suggestor](https://github.com/shakil18/Trading-Suggestor)
+Project Link: [https://github.com/shakil18/Trading-Suggester](https://github.com/shakil18/Trading-Suggester)
